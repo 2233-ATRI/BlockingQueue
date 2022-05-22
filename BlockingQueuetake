@@ -1,0 +1,9 @@
+    E take() throws InterruptedException;
+
+Retrieves and removes the head of this queue, waiting up to the specified wait time if necessary for an element to become available.
+形参:
+timeout – how long to wait before giving up, in units of unit unit – a TimeUnit determining how to interpret the timeout parameter
+返回值:
+the head of this queue, or null if the specified waiting time elapses before an element is available
+抛出:
+InterruptedException – if interrupted while waiting
