@@ -1,0 +1,24 @@
+import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class Threadpool {
+    public void ThreadPool(int corePoolSize ,int maxPoolSize){
+
+    }
+    public void execute(Runnable tesk) {
+
+    }
+    public void shutdown() {
+        final ReentrantLock mainLock = this.mainLock;
+        mainLock.lock();
+        try {
+            checkShutdownAccess();
+            advanceRunState(SHUTDOWN);
+            interruptIdleWorkers();
+            onShutdown(); // hook for ScheduledThreadPoolExecutor
+        } finally {
+            mainLock.unlock();
+        }
+        tryTerminate();
+    }
+}
