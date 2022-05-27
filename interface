@@ -1,0 +1,15 @@
+  public static ExecutorService newFixedThreadPool(int var0) {
+        return new ThreadPoolExecutor(var0, var0, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue());
+  }
+	
+  public static ExecutorService newSingleThreadExecutor() {
+        return new Executors.FinalizableDelegatedExecutorService(new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue()));
+  }
+ 
+  public static ExecutorService newCachedThreadPool() {
+        return new ThreadPoolExecutor(0, 2147483647, 60L, TimeUnit.SECONDS, new SynchronousQueue());
+  }
+ 
+  public static ScheduledExecutorService newScheduledThreadPool(int var0) {
+        return new ScheduledThreadPoolExecutor(var0);
+  }
