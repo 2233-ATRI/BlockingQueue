@@ -1,0 +1,12 @@
+import java.util.*;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class az{
+    public void ThreadPool(int curePoolSize,int maxPoolSize){
+    final int MAX_WORKER_NUMBERS=maxPoolSize;
+    final int DEFAUT_NUMBERS=curePoolSize;
+    final int MIN_WORKER_NUMBERS=1;
+    private final LinkedList<Job> 
+    //
+    }
+}
